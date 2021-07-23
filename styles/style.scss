@@ -1,0 +1,51 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import './color';
+
+@import './margin';
+@import './picture';
+@import './padding';
+
+body {
+    background: $colorGrey;
+}
+
+.container-main {
+    @include margin(15%);
+    background: $colorBlack;
+    padding-top: 8rem;
+    .picture_one, .picture_two {
+        @include padding(5%);
+        @include picture(100%, 30rem);
+        padding-top: 5rem;
+    }
+    
+    p {
+        @include padding(5%);
+        padding-top: 5rem;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        color: $colorWhite;
+    }
+    
+    p:last-child {
+        padding-bottom: 5rem;
+    }
+}
+
+
+.container-nav {
+    text-align: center;
+    background: $colorWhite;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    position: fixed;
+    width: 100%;
+    color: $colorBlack;
+    // box-shadow: 0 0.5rem grey;
+}

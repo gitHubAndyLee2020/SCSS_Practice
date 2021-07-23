@@ -1,0 +1,4 @@
+@mixin margin($marginSide) {
+    margin-left: $marginSide;
+    margin-right: $marginSide;
+}
